@@ -14,6 +14,15 @@ body {
 }
 
 /* Estilização do formulário */
+
+.FormularioAtv {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-right: 50px;
+}
+
 form {
     display: flex;
     flex-wrap: wrap;
@@ -25,7 +34,6 @@ form {
     margin-bottom: 2rem;
     width: 100%;
     max-width: 800px;
-    margin-right: 50px;
 }
 
 form input[type="text"],
@@ -90,4 +98,34 @@ tbody tr:hover {
 input[type="checkbox"] {
     transform: scale(1.2);
     cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form {
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    form input[type="text"],
+    form input[type="date"],
+    form input[type="button"],
+    form button {
+        width: 100%;
+    }
+
+    table {
+        font-size: 0.9rem;
+        overflow-x: auto;
+        display: block;
+    }
+
+    th, td {
+        padding: 8px 12px;
+    }
 }
